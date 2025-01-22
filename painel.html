@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Responsivo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Cabeçalho -->
+  <header class="bg-[#101828] fixed top-0 left-0 w-full h-16 flex justify-between items-center py-4 px-6 z-10">
+    <div class="flex items-center gap-4">
+      <!-- Botão do Menu Mobile -->
+      <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <img class="rounded-md w-8 h-8" src="/assets/img/istockphoto-1337144146-612x612.jpg" alt="Logo">
+    </div>
+    <div class="text-white flex items-center gap-4">
+      <p class="text-sm">Perfil</p>
+      <img class="rounded-md w-8 h-8" src="/assets/img/istockphoto-1337144146-612x612.jpg" alt="Avatar">
+    </div>
+  </header>
+
+  <!-- Layout Principal -->
+  <div class="flex gap-4">
+    <!-- Menu Lateral -->
+    <aside id="sidebar" class="fixed top-16 left-0 w-36 h-[calc(100vh-4rem)] bg-[#fcfcfd] border-solid border-r-2 border-r-[#f3f4f7] overflow-y-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+      <ul class="space-y-2 py-2 px-2">
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Início</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Produtos</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Venda</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Estoque</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Relatórios</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Clientes</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class=" mt-16 p-6 w-full bg-white shadow-md lg:ml-36">
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">Bem-vindo ao Painel</h1>
+      <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+        <p>Adicione aqui o conteúdo do painel.</p>
+        <p>Este conteúdo será rolável enquanto o cabeçalho e o menu lateral permanecem fixos.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Script para Menu Mobile -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+
+</body>
+</html>
