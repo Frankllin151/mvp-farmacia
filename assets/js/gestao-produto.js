@@ -25,4 +25,4 @@ setTimeout(() => {
  Alerta.classList.add("hidden")
  Alerta.classList.remove("flex")
  Alerta.classList.remove("inline-block")
-}, 5000)
+}, 1000)
