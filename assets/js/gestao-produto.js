@@ -26,3 +26,25 @@ setTimeout(() => {
  Alerta.classList.remove("flex")
  Alerta.classList.remove("inline-block")
 }, 1000)
+
+
+
+const GerenciarButton = document.querySelectorAll(".gerenciar");
+
+
+
+GerenciarButton.forEach((button) =>{
+ button.addEventListener("click" , () =>{
+    let GereModal = document.getElementById("modal-gerenciar")
+    GereModal.classList.add("block")
+    GereModal.classList.remove("hidden")
+   })
+})
+
+const closedGere = document.getElementById("closed-gere");
+
+closedGere.addEventListener("click", () =>{
+  let GereModal = document.getElementById("modal-gerenciar")
+  GereModal.classList.add("hidden")
+  GereModal.classList.remove("block")
+})

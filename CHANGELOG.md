@@ -11,6 +11,10 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 - Tela de Atualizar senha (Esqueci minha senha)
 ## [1.0.1] - 2025-01-25
 - Tabela de produtos 
+## [1.0.1] - 2025-01-26 
+- Modal gerenciar(excluir, editar) produtos
+- Tabela modificada (Adicionado botão para gerenciar)
+
 ## [1.0.0] - 2025-01-22
 ### Inicial
 - Estrutura inicial do projeto.
