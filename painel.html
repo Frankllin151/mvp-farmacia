@@ -54,10 +54,94 @@
     <!-- Conteúdo Principal -->
     <main class=" mt-16 p-6 w-full bg-white shadow-md lg:ml-36">
      
-      <div class=" p-4 rounded-lg flex justify-between item-center ">
+      <div class="p-4 rounded-lg flex justify-between items-center">
         <h1 class="text-2xl font-bold text-gray-800 mb-4">Gestão de Produtos</h1>
-        <button id="button-adicionar-produto" class="bg-[#12b76a] hover:bg-[#101828] transition text-white py-4 px-4 rounded-lg cursor-pointer">Adicionar</button>
+        <div class="relative drop-add">
+          <!-- Botão principal -->
+          <button
+          
+            class="bg-[#12b76a] hover:bg-[#101828] transition text-white py-4 px-4 rounded-lg cursor-pointer"
+            onclick="toggleDropdown('dropdown-main')"
+          >
+            Adicionar
+          </button>
+      
+          <!-- Dropdown principal -->
+          <div
+            id="dropdown-main"
+            class="absolute top-full right-0 mt-2 bg-white border rounded-lg shadow-lg w-48 hidden"
+          >
+            <ul class="py-2">
+              <!-- Opção: Adicionar -->
+              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"    id="button-adicionar-produto">Adicionar</li>
+      
+              <!-- Dropdown Categoria -->
+              <li class="relative drop-add">
+                <button
+                  class="w-full text-left px-4 py-2 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
+                  onclick="toggleDropdown('dropdown-categoria')"
+                >
+                  Categoria
+                  <span>&#9654;</span>
+                </button>
+                <!-- Sub-dropdown de Categoria -->
+                <div
+                  id="dropdown-categoria"
+                  class="absolute top-0 right-full ml-2 bg-white border rounded-lg shadow-lg w-40 hidden"
+                >
+                  <ul class="py-2">
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Pomada</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Líquido</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Comprimido</li>
+                  </ul>
+                </div>
+              </li>
+      
+              <!-- Opção: Pesquisar -->
+              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"  id="pesquisar-modal">Pesquisar</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+ <!---modal to pesquisar-->
+ <div
+  id="modal-pesquisar"
+  class="fixed inset-0 bg-opacity-50 hidden flex items-center justify-center "
+>
+  <div class="bg-[#fcfcfd] rounded-lg shadow-lg w-full max-w-lg p-6 relative">
+    <!-- Botão para fechar o modal -->
+    <button
+id="btn-pesquisar-closed"
+      class="absolute cursor-pointer top-4 right-4 text-[#101828] hover:text-[#e63946] text-xl font-bold"
+    >
+      X
+    </button>
+
+    <!-- Título -->
+    <h2 class="text-small font-semibold text-[#101828] mb-6">
+   Pesquisa Medicamentos (Lote ,Vencimento ou Nome)
+    </h2>
+
+    <!-- Botões -->
+    <div class="flex flex-col space-y-4">
+      <input
+        type="text"
+        id="nome"
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-[#12b76a]"
+        placeholder="Pesquisar  (Lote , Vencimento ou Nome) "
+      />
+      <!-- Botão Editar -->
+      <button
+    
+        class="bg-[#12b76a] cursor-pointer hover:bg-[#101828] text-white py-2 px-4 rounded-lg font-medium transition"
+      >
+       Pesquisar
+      </button>
+    </div>
+  </div>
+</div>
+ <!---modal to pesquisar end--->
 
     <!-- Modal -->
 <div

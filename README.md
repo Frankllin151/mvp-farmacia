@@ -12,7 +12,7 @@ Este projeto é um sistema de ponto de venda (PDV) para farmácias, desenvolvido
 - **Frontend**: Vanilla javascript, HTML
 - **Backend**: PHP
 - **Banco de Dados**: Mysql
-- **Estilo**: [TailwindCSS](https://tailwindcss.com/) (ou o que você estiver usando)
+- **Estilo**: [TailwindCSS](https://tailwindcss.com/) 
 
 ## Como rodar o projeto
 
