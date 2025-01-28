@@ -16,7 +16,8 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 - Tabela modificada (Adicionado botão para gerenciar)
 ## [1.0.1] - 2025-01-26
 - Dropdown para pesquisar, controle de categorias e adicionar (Modificação da  funcionalidades  e adicionar)
-
+## [1.0.1] - 2025-01-27
+- Modificação da tabela (coluna estoque)
 ## [1.0.0] - 2025-01-22
 ### Inicial
 - Estrutura inicial do projeto.

@@ -165,7 +165,7 @@ class="fixed inset-0  bg-opacity-50 flex items-center justify-center hidden"
   <!-- Formulário -->
   <form>
     <!-- Nome -->
-    <div class="mb-4">
+    <div class="mb-1">
       <label
         for="nome"
         class="block text-sm font-medium text-[#101828] mb-2"
@@ -181,7 +181,7 @@ class="fixed inset-0  bg-opacity-50 flex items-center justify-center hidden"
     </div>
 
     <!-- Lote -->
-    <div class="mb-4">
+    <div class="mb-1">
       <label
         for="lote"
         class="block text-sm font-medium text-[#101828] mb-2"
@@ -196,8 +196,23 @@ class="fixed inset-0  bg-opacity-50 flex items-center justify-center hidden"
       />
     </div>
 
+    <!---Estoque-->
+    <div class="mb-1">
+      <label
+        for="lote"
+        class="block text-sm font-medium text-[#101828] mb-2"
+      >
+        Estoque
+      </label>
+      <input
+        type="text"
+        id="estoque"
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-[#12b76a]"
+        placeholder="Quantidade de estoque"
+      />
+    </div>
     <!-- Validade -->
-    <div class="mb-4">
+    <div class="mb-1">
       <label
         for="validade"
         class="block text-sm font-medium text-[#101828] mb-2"
@@ -212,7 +227,7 @@ class="fixed inset-0  bg-opacity-50 flex items-center justify-center hidden"
     </div>
 
     <!-- Categoria -->
-    <div class="mb-4">
+    <div class="mb-2">
       <label
         for="tipo"
         class="block text-sm font-medium text-[#101828] mb-2"
@@ -259,6 +274,7 @@ class="fixed inset-0  bg-opacity-50 flex items-center justify-center hidden"
           <tr>
             <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Medicamento</th>
             <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Lote</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Estoque</th>
             <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Validade</th>
             <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Categoria</th>
             <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Status</th>
@@ -269,6 +285,7 @@ class="fixed inset-0  bg-opacity-50 flex items-center justify-center hidden"
           <tr class="bg-[#fcfcfd]">
             <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Paracetamol</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Gerenciar</button></td>
             <td class="px-6 py-4 text-sm text-[#667085]">Lote1234</td>
+            <td class="px-6 py-4 text-sm text-[#667085]">65</td>
             <td class="px-6 py-4 text-sm text-[#667085]">2025-12-31</td>
             <td class="px-6 py-4 text-sm text-[#667085]">Comprimido</td>
             <td class="px-6 py-4">
@@ -279,6 +296,7 @@ class="fixed inset-0  bg-opacity-50 flex items-center justify-center hidden"
           <tr class="bg-[#fcfcfd]">
             <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Amoxicilina</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Gerenciar</button></td>
             <td class="px-6 py-4 text-sm text-[#667085]">Lote5678</td>
+            <td class="px-6 py-4 text-sm text-[#667085]">65</td>
             <td class="px-6 py-4 text-sm text-[#667085]">2024-05-20</td>
             <td class="px-6 py-4 text-sm text-[#667085]">Líquido</td>
             <td class="px-6 py-4">
@@ -289,6 +307,7 @@ class="fixed inset-0  bg-opacity-50 flex items-center justify-center hidden"
           <tr class="bg-[#fcfcfd]">
             <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Ibuprofeno</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Gerenciar</button></td>
             <td class="px-6 py-4 text-sm text-[#667085]">Lote91011</td>
+            <td class="px-6 py-4 text-sm text-[#667085]">65</td>
             <td class="px-6 py-4 text-sm text-[#667085]">2023-01-15</td>
             <td class="px-6 py-4 text-sm text-[#667085]">Pomada</td>
             <td class="px-6 py-4">
