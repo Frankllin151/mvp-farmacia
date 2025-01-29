@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de clientes</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  
+   <!-- Cabeçalho -->
+   <header class="bg-[#101828] fixed top-0 left-0 w-full h-16 flex justify-between items-center py-4 px-6 z-10">
+    <div class="flex items-center gap-4">
+      <!-- Botão do Menu Mobile -->
+      <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <img class="rounded-md w-8 h-8" src="/assets/img/istockphoto-1337144146-612x612.jpg" alt="Logo">
+    </div>
+    <div class="text-white flex items-center gap-4">
+      <p class="text-sm">Perfil</p>
+      <img class="rounded-md w-8 h-8" src="/assets/img/istockphoto-1337144146-612x612.jpg" alt="Avatar">
+    </div>
+  </header>
+   <!-- Layout Principal -->
+   <div class="flex gap-4">
+    <!-- Menu Lateral -->
+    <aside id="sidebar" class="fixed top-16 left-0 w-36 h-[calc(100vh-4rem)] bg-[#fcfcfd] border-solid border-r-2 border-r-[#f3f4f7] overflow-y-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+      <ul class="space-y-2 py-2 px-2">
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Início</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Produtos</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Venda</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Estoque</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Relatórios</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff] bg-[#12b76a] text-white" href="#">Clientes</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class=" mt-16 p-6 w-full bg-white shadow-md lg:ml-36">
+     
+      <div class="p-4 rounded-lg flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Cadastre clientes </h1>
+        <div class="relative drop-add">
+          <!-- Botão principal -->
+          <button
+            class="bg-[#12b76a] hover:bg-[#101828] transition text-white py-4 px-4 rounded-lg cursor-pointer"
+          >
+            qualquer coisa aqui faça sentido
+          </button>
+      
+         
+        </div>
+      </div>
+
+      <div class="min-h-screen overflow-x-scroll">
+        <div class="overflow-y-scroll rounded-lg shadow-lg">
+            <table class="min-w-full bg-white rounded-lg">
+                <thead class="bg-[#101828] text-white">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Nome
+
+                        </th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold uppercase">CPF</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Contato</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Quantidade(Md)</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-[#f3f4f7]">
+                    <!-- Linha 1 -->
+                    <tr class="bg-[#fcfcfd]">
+                      <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>João Silva</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Detalhes</button></td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">123.456.789-00</td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">(11) 98765-4321</td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">5</td>
+                    </tr>
+                    <!-- Linha 2 -->
+                    <tr class="bg-[#fcfcfd]">
+                      <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Maria Oliveira</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Detalhes</button></td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">987.654.321-00</td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">(21) 97654-3210</td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">10</td>
+                    </tr>
+                    <!-- Linha 3 -->
+                    <tr class="bg-[#fcfcfd]">
+                      <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Carlos Santos</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Detalhes</button></td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">456.123.789-00</td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">(31) 99876-5432</td>
+                        <td class="px-6 py-4 text-sm text-[#667085]">3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    </main>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
