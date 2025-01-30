@@ -1,0 +1,12 @@
+.rolagem-barra::-webkit-scrollbar{
+width: 3px;
+height: 10px;
+}
+.rolagem-barra::-webkit-scrollbar-track{
+  background: #12b76a;
+}
+.rolagem-barra::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-color: #12b76a;
+  border-radius: 6px;
+}

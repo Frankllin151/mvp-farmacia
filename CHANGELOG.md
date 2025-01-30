@@ -20,6 +20,8 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 - Modificação da tabela (coluna estoque)
 ## [1.0.1] - 2025-01-29
 - Pagina tabela clientes 
+# [1.0.1] - 2025-01-30
+- estilo dos inputs modificados
 ## [1.0.0] - 2025-01-22
 ### Inicial
 - Estrutura inicial do projeto.

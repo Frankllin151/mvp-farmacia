@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tela de login</title>
+  <link rel="stylesheet" href="./assets/css/class.css">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body>
@@ -25,7 +26,10 @@
           <input
             type="email"
             id="email"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-[#12b76a]"
+            
+            class="w-full px-4 py-2  rounded-lg focus:outline-none focus:ring 
+            custom-border
+            focus:ring-[#c4edda] focus:shadow-[0_0_0_3px_#c4edda] "
             placeholder="Digite seu email"
             required
           />
@@ -42,7 +46,9 @@
           <input
             type="password"
             id="password"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-[#12b76a]"
+            class="w-full px-4 py-2  rounded-lg focus:outline-none focus:ring 
+            custom-border
+            focus:ring-[#c4edda] focus:shadow-[0_0_0_3px_#c4edda] "
             placeholder="Digite sua senha"
             required
           />
@@ -99,6 +105,9 @@
         errorMessage.classList.remove('hidden'); // Mostra a mensagem de erro
       }
     });
+
+
+   
   </script>
   
 </body>

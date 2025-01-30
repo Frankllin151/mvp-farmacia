@@ -1,7 +1,4 @@
 
-
-
-
 const Alerta = document.getElementById("alert-red")
 setTimeout(() => {
  Alerta.classList.add("hidden")
@@ -68,4 +65,5 @@ function toggleModal(triggerId, modalId, addClass, removeClass) {
 toggleModal("close-modal", "modal-medicamento", "hidden", "block");
 toggleModal("closed-gere", "modal-gerenciar", "hidden", "block");
 toggleModal("btn-pesquisar-closed", "modal-pesquisar", "hidden", "block");
+
 
