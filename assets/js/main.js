@@ -26,3 +26,6 @@ GetinputAll.forEach((event) =>{
     event.classList.add("custom-border")
   })
 })
+
+
+

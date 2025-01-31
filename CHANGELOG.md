@@ -1,6 +1,9 @@
 # Changelog
 
 Todas as alterações importantes para este projeto serão documentadas neste arquivo.
+## [1.0.0] - 2025-01-22
+### Inicial
+- Estrutura inicial do projeto.
 
 ## [1.0.1] - 2025-01-23
 ### Adicionado
@@ -22,6 +25,6 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 - Pagina tabela clientes 
 # [1.0.1] - 2025-01-30
 - estilo dos inputs modificados
-## [1.0.0] - 2025-01-22
-### Inicial
-- Estrutura inicial do projeto.
+# [1.0.1] - 2025-01-31
+- form de pesquisar 
+- Modal para cadastrar clientes 

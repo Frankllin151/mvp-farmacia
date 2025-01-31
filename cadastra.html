@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de clientes</title>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./assets/css/class.css">
 </head>
 <body>
   
@@ -54,20 +55,33 @@
     <main class=" mt-16 p-6 w-full bg-white shadow-md lg:ml-36">
      
       <div class="p-4 rounded-lg flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4">Cadastre clientes </h1>
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Gestão de clientes </h1>
+       
         <div class="relative drop-add">
           <!-- Botão principal -->
           <button
+          id="open-form-cliente"
             class="bg-[#12b76a] hover:bg-[#101828] transition text-white py-4 px-4 rounded-lg cursor-pointer"
           >
            Cadastra 
           </button>
-      
-         
+        </div>
+       
+      </div>
+      <div class="relative w-full">
+        <input type="text" 
+               placeholder="Pesquisar..."
+               class="w-full px-4 py-2 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#c4edda] focus:shadow-[0_0_0_3px_#c4edda]">
+        <div class="absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          
         </div>
       </div>
-
-      <div class="min-h-screen overflow-x-scroll">
+      
+    
+      <div class="min-h-screen overflow-x-scroll " style="margin-top: 10px;">
         <div class="overflow-y-scroll rounded-lg shadow-lg">
             <table class="min-w-full bg-white rounded-lg">
                 <thead class="bg-[#101828] text-white">
@@ -107,8 +121,101 @@
         </div>
     </div>
     
+    <!--modal cadastro-->
+    <div
+    id="modal-cadastra"
+    class="fixed inset-0 bg-opacity-50 flex items-center justify-center hidden  "
+  >
+    <div class="bg-[#fcfcfd] rounded-lg shadow-lg w-full max-w-lg p-4 relative max-h-[80vh] overflow-y-auto rolagem-barra ">
+      <!-- Botão para fechar o modal -->
+      <button
+        id="close-cliente"
+        class="absolute cursor-pointer top-4 right-4 text-[#101828] hover:text-red-500 text-xl font-bold"
+      >
+        X
+      </button>
+  
+      <!-- Título -->
+      <h2 class="text-2xl font-semibold text-[#101828] mb-6">
+        Cadastro Cliente
+      </h2>
+  
+      <!-- Formulário -->
+      <form>
+        <!-- Nome -->
+        <div class="mb-1">
+          <label for="nome" class="block text-sm font-medium text-[#101828] mb-2">
+            Nome 
+          </label>
+          <input
+            type="text"
+            id="nome"
+            class="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring custom-border focus:ring-[#c4edda] focus:shadow-[0_0_0_3px_#c4edda]"
+            placeholder="Digite o nome do cliente"
+          />
+        </div>
+  
+       
+        
+  
+        <!-- Contato -->
+        <div class="mb-1">
+          <label for="preco" class="block text-sm font-medium text-[#101828] mb-2">
+            Contato (opcional)
+          </label>
+          <input
+            type="text"
+            id="contato"
+            class="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring custom-border focus:ring-[#c4edda] focus:shadow-[0_0_0_3px_#c4edda]"
+            placeholder="Contato"
+          />
+        </div>
+  
+        <!-- CPF -->
+        <div class="mb-1">
+          <label for="estoque" class="block text-sm font-medium text-[#101828] mb-2">
+          CPF 
+          </label>
+          <input
+            type="text"
+            id="estoque"
+            class="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring custom-border focus:ring-[#c4edda] focus:shadow-[0_0_0_3px_#c4edda]"
+            placeholder="CPF do cliente"
+          />
+        </div>
+
+        <!-- Botão de Enviar -->
+        <button
+          type="submit"
+          class="mb-1 bg-[#12b76a] cursor-pointer hover:bg-[#101828] transition text-white py-2 px-4 rounded-lg w-full"
+        >
+          Cadastrar Cliente
+        </button>
+      </form>
+    </div>
+  </div>
+    <!--modal cadastro end-->
     </main>
   </div>
   <script src="./assets/js/main.js"></script>
+
+  <script>
+    const OpenModalCliente = document.getElementById("open-form-cliente")
+ OpenModalCliente.addEventListener("click", () =>{
+  let FormModalCliente = document.getElementById("modal-cadastra");
+  FormModalCliente.classList.add("block");
+  FormModalCliente.classList.remove("hidden")
+ })
+
+
+ const ClosedModalFormCliente = document.getElementById("close-cliente")
+ ClosedModalFormCliente.addEventListener("click" , () => {
+  let FormModalCliente = document.getElementById("modal-cadastra");
+  FormModalCliente.classList.add("hidden");
+  FormModalCliente.classList.remove("block")
+ })
+
+</script>
+  
 </body>
 </html>
