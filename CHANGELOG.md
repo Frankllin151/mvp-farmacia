@@ -28,3 +28,5 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 # [1.0.1] - 2025-01-31
 - form de pesquisar 
 - Modal para cadastrar clientes 
+# [1.0.1] - 2025-02-01
+- Painel estoque
