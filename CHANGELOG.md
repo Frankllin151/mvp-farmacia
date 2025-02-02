@@ -30,3 +30,5 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 - Modal para cadastrar clientes 
 # [1.0.1] - 2025-02-01
 - Painel estoque
+# [1.0.1] - 2025-02-02 
+- Modal para cadastro (DETALHES)  
