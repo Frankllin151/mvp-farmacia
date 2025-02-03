@@ -32,3 +32,4 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 - Painel estoque
 # [1.0.1] - 2025-02-02 
 - Modal para cadastro (DETALHES)  
+# [1.0.1] - 2025-02-03
