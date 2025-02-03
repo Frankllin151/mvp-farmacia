@@ -1,0 +1,15 @@
+{
+  "name": "mvp-farmacia",
+  "version": "1.0.0",
+  "description": "Este projeto é um sistema de ponto de venda (PDV) para farmácias, desenvolvido como um MVP (Minimum Viable Product). O objetivo do sistema é fornecer funcionalidades básicas para o gerenciamento de vendas, produtos e alertas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
