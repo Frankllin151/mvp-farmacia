@@ -15,4 +15,3 @@ Este projeto é um sistema de ponto de venda (PDV) para farmácias, desenvolvido
 - **Estilo**: [TailwindCSS](https://tailwindcss.com/) 
 
 ## Como rodar o projeto
-

@@ -70,13 +70,18 @@
       </div>
       <div class="relative w-full">
         <input type="text" 
+               id="searchInput"
                placeholder="Pesquisar..."
                class="w-full px-4 py-2 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#c4edda] focus:shadow-[0_0_0_3px_#c4edda]">
         <div class="absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
-          
+        </div>
+      
+        <!-- Resultados da pesquisa -->
+        <div id="searchResults" class="absolute w-full bg-white shadow-lg rounded-lg mt-2 max-h-48 overflow-y-auto transition-all duration-300 ease-in-out opacity-0 invisible">
+          <!-- Aqui os resultados serão renderizados -->
         </div>
       </div>
       
@@ -89,6 +94,7 @@
                         <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Nome
 
                         </th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Email</th>
                         <th class="px-6 py-3 text-left text-sm font-semibold uppercase">CPF</th>
                         <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Contato</th>
                         <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Quantidade(Md)</th>
@@ -98,6 +104,7 @@
                     <!-- Linha 1 -->
                     <tr class="bg-[#fcfcfd]">
                       <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>João Silva</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer detalhes" >Detalhes</button></td>
+                      <td class="px-6 py-4 text-sm text-[#667085]">joao40@gmail.com</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">123.456.789-00</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">(11) 98765-4321</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">5</td>
@@ -105,6 +112,7 @@
                     <!-- Linha 2 -->
                     <tr class="bg-[#fcfcfd]">
                       <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Maria Oliveira</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer detalhes" >Detalhes</button></td>
+                      <td class="px-6 py-4 text-sm text-[#667085]">maria50@gmail.com</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">987.654.321-00</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">(21) 97654-3210</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">10</td>
@@ -112,6 +120,7 @@
                     <!-- Linha 3 -->
                     <tr class="bg-[#fcfcfd]">
                       <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Carlos Santos</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer detalhes" >Detalhes</button></td>
+                      <td class="px-6 py-4 text-sm text-[#667085]">carlos60@gmail.com</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">456.123.789-00</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">(31) 99876-5432</td>
                         <td class="px-6 py-4 text-sm text-[#667085]">3</td>
@@ -299,6 +308,6 @@ detalhes_closed.addEventListener("click" , () =>{
   moda_detalhes.classList.remove("block")
 })
 </script>
-  
+  <script src="/src/search.js"></script>
 </body>
 </html>
