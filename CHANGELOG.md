@@ -35,4 +35,4 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 # [1.0.1] - 2025-02-03
 - Adicionado Typescript no projeto
 # [1.0.1] - 2025-02-04 
-- Pesquisar modificado usado typescript mecanico de buscar de resultados (pagina cadastro)
+- Pesquisar modificado usado typescript mecanisco de buscar de resultados (pagina cadastro)
