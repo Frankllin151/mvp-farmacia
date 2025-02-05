@@ -36,3 +36,6 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 - Adicionado Typescript no projeto
 # [1.0.1] - 2025-02-04 
 - Pesquisar modificado usado typescript mecanisco de buscar de resultados (pagina cadastro)
+# [1.0.1] - 2025-02-05 
+- Pagina de estoque 
+- Filtro de quantidade de venda na pagina de estoque 

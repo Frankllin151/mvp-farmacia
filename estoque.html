@@ -47,22 +47,150 @@
         </li>
       </ul>
     </aside>
-    <main class=" mt-16 p-6 w-full bg-white shadow-md lg:ml-36">
+    <main class=" mt-16 p-6 w-full lg:ml-36">
       <div class="p-4 rounded-lg flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4">Gestão de Produtos</h1>
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Estoque</h1>
         <div class="relative drop-add">
           <!-- Botão principal -->
           <button
             class="bg-[#12b76a] hover:bg-[#101828] transition text-white py-4 px-4 rounded-lg cursor-pointer"
             onclick="toggleDropdown('dropdown-main')"
           >
-            Estoque
+            Filtrar
           </button>
       
        
         </div>
       </div>
+
+      <div class="">
+        <div class="overflow-y-scroll rounded-lg shadow-lg ">
+          <table class="min-w-full bg-white rounded-lg ">
+            <thead class="bg-[#101828] text-white">
+              <tr>
+                <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Medicamento</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Lote</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Preço</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Estoque</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Validade</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Categoria</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold uppercase">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#f3f4f7] ">
+              <!-- Linha 1 -->
+              <tr class="bg-[#fcfcfd]">
+                <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Paracetamol</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Gerenciar</button></td>
+                <td class="px-6 py-4 text-sm text-[#667085]">Lote1234</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">12,50</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">65</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">2025-12-31</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">Comprimido</td>
+                <td class="px-6 py-4">
+                  <span class="px-2 py-1 text-xs font-semibold text-white bg-[#12b76a] rounded-lg">OK</span>
+                </td>
+              </tr>
+              <!-- Linha 2 -->
+              <tr class="bg-[#fcfcfd]">
+                <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Amoxicilina</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Gerenciar</button></td>
+                <td class="px-6 py-4 text-sm text-[#667085]">Lote5678</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">12,50</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">65</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">2024-05-20</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">Líquido</td>
+                <td class="px-6 py-4">
+                  <span class="px-2 py-1 text-xs font-semibold text-white bg-[#ffd60a] rounded-lg">Alerta</span>
+                </td>
+              </tr>
+              <!-- Linha 3 -->
+              <tr class="bg-[#fcfcfd]">
+                <td class="px-6 py-4 text-sm text-[#101828] flex justify-between items-center"> <p>Ibuprofeno</p> <button class="text-white bg-[#12b76a] rounded-lg p-3 cursor-pointer gerenciar" >Gerenciar</button></td>
+                <td class="px-6 py-4 text-sm text-[#667085]">Lote91011</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">12,50</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">65</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">2023-01-15</td>
+                <td class="px-6 py-4 text-sm text-[#667085]">Pomada</td>
+                <td class="px-6 py-4">
+                  <span class="px-2 py-1 text-xs font-semibold text-white bg-[#e63946] rounded-lg">Vencido</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+        </div>
+      </div>
+
+
+
+      <!---Produto mais vendido (ano , mes(atual,2mes , 3mes), semana )-->
+      
+      <div class="shadow-md bg-white rounded-md py-4 mt-16">
+        <div class="flex justify-between items-center border-b border-gray-300 pb-4 mb-4">
+          <h3 class="text-2xl font-semibold text-gray-800">Mais vendidos</h3>
+          <div class="relative drop-add">
+            <button id="open-modal-filtro-vd"  class="text-white bg-[#12b76a] rounded-lg px-4 py-2 hover:bg-[#101828] transition cursor-pointer">Filtrar</button>
+           
+          </div>
+          
+        </div>
+      
+        <!-- Tabela -->
+        <div class="overflow-x-auto">
+          <table class="min-w-full table-auto">
+            <tbody>
+              <!-- Linha de exemplo -->
+              <tr class="border-b border-gray-100">
+                <td class="py-2 px-4 text-sm text-gray-600">
+                  <div class="flex flex-col">
+                    <h6 class="text-sm text-gray-500">Semana atual</h6>
+                  </div>
+                </td>
+                <td class="py-2 px-4 text-sm text-gray-800">
+                  <p>Paracetamol</p>
+                </td>
+                <td class="py-2 px-4 text-sm text-gray-600">
+                  <p><span class="font-semibold">2</span></p>
+                 
+                </td>
+               
+              </tr>
+              <!-- Adicione outras linhas conforme necessário -->
+            </tbody>
+          </table>
+        </div>
+        <div id="modal-fitro" class="fixed inset-0  bg-opacity-50 block flex items-center justify-center">
+          <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 relative">
+            <!-- Botão para fechar -->
+            <button id="closed-filtro" class="absolute top-4 right-4 text-[#101828] hover:text-[#e63946] text-xl font-bold">
+              X
+            </button>
+      
+            <!-- Título -->
+            <h2 class="text-2xl font-semibold text-[#101828] mb-6">Filtrar Por:</h2>
+      
+            <!-- Botões de filtro -->
+            <div class="grid grid-cols-2 gap-4">
+              <button class="filter-btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Mês Atual</button>
+              <button class="filter-btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Há 1 mês</button>
+              <button class="filter-btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Há 2 meses</button>
+              <button class="filter-btn bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Há 3 meses</button>
+              <button class="filter-btn bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-700">Há 1 semana</button>
+              <button class="filter-btn bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-700">Há 2 semanas</button>
+              <button class="filter-btn bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-700">Há 3 semanas</button>
+              <button class="filter-btn bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-700">Há 3 dias</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+       <!---Produto mais vendido (ano , mes(atual,2mes , 3mes), semana ) end-->
+      
+
     </main>
   </div>
+
+
+  <script src="./src/filtro.js"></script>
 </body>
 </html>

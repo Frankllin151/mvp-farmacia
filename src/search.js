@@ -1,5 +1,6 @@
 var data = [
     { nome: "João Silva", email: "joao40@gmail.com", cpf: "123.456.789-00", contato: "(11) 98765-4321" },
+    { nome: "João Silva", email: "joao40@gmail.com", cpf: "123.456.789-00", contato: "(11) 98765-4321" },
     { nome: "Maria Oliveira", email: "maria50@gmail.com", cpf: "987.654.321-00", contato: "(21) 97654-3210" },
     { nome: "Carlos Santos", email: "carlos60@gmail.com", cpf: "456.123.789-00", contato: "(31) 99876-5432" },
 ];
