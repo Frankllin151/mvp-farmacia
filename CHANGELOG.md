@@ -39,3 +39,5 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 # [1.0.1] - 2025-02-05 
 - Pagina de estoque 
 - Filtro de quantidade de venda na pagina de estoque 
+# [1.0.1] - 2025-02-07
+- Venda front-end
