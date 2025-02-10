@@ -41,3 +41,7 @@ Todas as alterações importantes para este projeto serão documentadas neste ar
 - Filtro de quantidade de venda na pagina de estoque 
 # [1.0.1] - 2025-02-07
 - Venda front-end
+# [1.0.1] - 2025-02-10
+- Tabela de produto mais vendido na pagina estoque 
+- Adicionado função para renderização do html com os dados simulado do back-end
+- Refactoor de codigo na filtro.ts 

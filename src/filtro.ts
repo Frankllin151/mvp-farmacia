@@ -59,16 +59,47 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("hidden");
   });
 
+
+  const renderizarTabela = (dados:Medicamento[]) =>{
+    const tabelaBody = document.getElementById("medicamentos-tabela") as HTMLTableSectionElement
+    tabelaBody.innerHTML = ""; // Limpa a tabela antes de atualizar os dados
+ dados.forEach((med) =>{
+  const row = document.createElement("tr");
+  row.className = "border-b border-gray-100";
+
+    row.innerHTML = `
+      <td class="py-2 px-4 text-sm text-gray-600">
+        <div class="flex flex-col">
+          <h6 class="text-sm text-gray-500">Data da venda</h6>
+          <span>${med.dataVenda.toLocaleDateString()}</span>
+        </div>
+      </td>
+      <td class="py-2 px-4 text-sm text-gray-800">
+        <p>${med.nomeMedicamento}</p>
+      </td>
+      <td class="py-2 px-4 text-sm text-gray-600">
+        <p><span class="font-semibold">${med.quantidadeVendidas}</span></p>
+      </td>
+    `;
+    tabelaBody.appendChild(row);
+ }) }
+ renderizarTabela(medicamentos);
+
+
+
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", (event) => {
       const target = event.target as HTMLElement;
       const filtro = target.innerText;
       const dadosFiltrados = filtrarMedicamentos(filtro);
       console.log(`Filtrando por: ${filtro}`);
-      console.log(dadosFiltrados);
+      renderizarTabela(dadosFiltrados);
 
       modal.classList.add('hidden')
       modal.classList.remove("block")
     });
   });
 });
+
+
+
