@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  
+   <!-- Cabeçalho -->
+   <header class="bg-[#101828] fixed top-0 left-0 w-full h-16 flex justify-between items-center py-4 px-6 z-10">
+    <div class="flex items-center gap-4">
+      <!-- Botão do Menu Mobile -->
+      <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <img class="rounded-md w-8 h-8" src="/assets/img/istockphoto-1337144146-612x612.jpg" alt="Logo">
+    </div>
+    <div class="text-white flex items-center gap-4">
+      <p class="text-sm">Perfil</p>
+      <img class="rounded-md w-8 h-8" src="/assets/img/istockphoto-1337144146-612x612.jpg" alt="Avatar">
+    </div>
+  </header>
+   <!-- Layout Principal -->
+   <div class="flex gap-4">
+    <!-- Menu Lateral -->
+    <aside id="sidebar" class="fixed top-16 left-0 w-36 h-[calc(100vh-4rem)] bg-[#fcfcfd] border-solid border-r-2 border-r-[#f3f4f7] overflow-y-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+      <ul class="space-y-2 py-2 px-2">
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Início</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Produtos</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Venda</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Estoque</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff] bg-[#12b76a] text-white" href="#">Relatórios</a>
+        </li>
+        <li>
+          <a class="block text-[14px] p-2 rounded hover:bg-[#12b76a] transition hover:text-[#fff]" href="#">Clientes</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class=" mt-16 p-6 w-full  lg:ml-36">
+     
+      <div class="p-4 rounded-lg flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Relatórios</h1>
+        <div class="relative drop-add">
+          <!-- Botão principal -->
+          <button
+            class="bg-[#12b76a] hover:bg-[#101828] transition text-white py-4 px-4 rounded-lg cursor-pointer"
+          >
+            qualquer coisa aqui faça sentido
+          </button>
+      
+         
+        </div>
+      </div>
+
+      <div class="overflow-x-auto p-6 ">
+        <h2 class="text-2xl font-semibold text-[#101828] mb-4">Relatório de Vendas</h2>
+        <table  class="min-w-full table-auto bg-white shadow-lg rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-[#12b76a] text-white">
+              <th class="py-2 px-4 text-left">Data</th>
+              <th class="py-2 px-4 text-left">Produto</th>
+              <th class="py-2 px-4 text-left">Quantidade</th>
+              <th class="py-2 px-4 text-left">Valor (R$)</th>
+              <th class="py-2 px-4 text-left">Lucro (R$)</th>
+            </tr>
+          </thead>
+          <tbody id="relatorio-tabela">
+            <!-- Os dados serão inseridos dinamicamente aqui -->
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Modal de Filtros -->
+      <div id="modal-filtro" class="fixed inset-0 hidden bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 relative">
+          <button id="fechar-filtro" class="absolute top-4 right-4 text-[#101828] hover:text-[#e63946] text-xl font-bold">
+            X
+          </button>
+          <h2 class="text-2xl font-semibold text-[#101828] mb-6">Filtrar Por:</h2>
+          <div class="grid grid-cols-2 gap-4">
+            <button class="filter-btn bg-[#12b76a] text-white py-2 px-4 rounded-lg hover:bg-green-700">Mês Atual</button>
+            <button class="filter-btn bg-[#12b76a] text-white py-2 px-4 rounded-lg hover:bg-green-700">Semana Atual</button>
+            <button class="filter-btn bg-[#e63946] text-white py-2 px-4 rounded-lg hover:bg-red-700">Ontem</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Botões de Exportação -->
+      <div class="flex justify-end mt-4 space-x-4">
+        <button id="exportar-excel" class="bg-[#ffd60a] text-black py-2 px-4 rounded-lg hover:bg-yellow-600">Exportar Excel</button>
+        <button id="exportar-pdf" class="bg-[#e63946] text-white py-2 px-4 rounded-lg hover:bg-red-700">Exportar PDF</button>
+      </div>
+      
+    </main>
+  </div>
+  <script src="./assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+  <script>
+
+const expoPdf = () => {
+    const element = document.getElementById('conteudo-pdf'); // O conteúdo que você quer gerar no PDF
+    
+    if (element) {
+      // Usando a CDN html2pdf para gerar o PDF
+      html2pdf()
+        .from(element)
+        .save('relatorio.pdf'); // Nome do arquivo PDF gerado
+    }
+  };
+
+  const PdfButton = document.getElementById('exportar-pdf');
+  PdfButton.addEventListener('click', expoPdf);
+  </script>
+  <script src="./src/relatorio.js"></script>
+</body>
+</html>
